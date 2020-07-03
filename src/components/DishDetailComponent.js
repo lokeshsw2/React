@@ -8,7 +8,8 @@ class DishDetail extends Component {
 
         if(dish != null) {
             return (
-                    <>
+                <div className="container">
+                    <div className="row">
                         <div className="col-12 col-md-5 m-1">
                         <Card>
                             <CardImg width="100%" src={dish.image} alt={dish.name} />
@@ -22,7 +23,8 @@ class DishDetail extends Component {
                             <h4>Comments</h4>   
                                 {this.renderComments(dish.comments)}   
                         </div>
-                    </>
+                    </div>
+                </div>
             )
         } else {
             return(<div></div>)
@@ -35,7 +37,7 @@ class DishDetail extends Component {
                 return(
                     <div key={item.id}>
                         <p>{item.comment}</p>
-                        <p>{`--${item.author}, ${item.date}`}</p>
+                        <p>--{item.author}, {new Intl.DateTimeFormat('en-US', {year: 'numeric',month: 'short', day:'2-digit'}).format(new Date(Date.parse(item.date)))}</p>
                     </div>
                 )
             })
