@@ -56,7 +56,7 @@ class Main extends Component {
             return(
                 <About leaders={this.state.leaders}/>
             )
-        }
+        }   
 
         return (
             <div>
