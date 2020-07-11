@@ -138,9 +138,9 @@ function RenderComments({comments, postComment, dishId}){
         return(
             <div className="col-12 col-md-5 m-1">
                 <h4>Comments</h4>
-                <Stagger in>
-                    {listItems}
-                </Stagger>
+                    <Stagger in>
+                        {listItems}
+                    </Stagger>
                 <CommentForm dishId={dishId} postComment={postComment}/>
             </div>
         )
